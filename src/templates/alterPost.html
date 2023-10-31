@@ -1,0 +1,41 @@
+<div class="c-newPost">
+  <h2 class="title-newPost">Alterar Post {{postagens.titulo}} {{postagens.id}}:</h2>
+
+  <form >
+    <div>
+      <label for="titulo">Titulo da postagem:</label>
+      <input type="text" name="titulo" class="input-title-new" id="titulo" value="{{postagens.titulo}}" data-id="{{postagens.id}}">
+    </div>
+    
+    <textarea name="conteudo" cols="30" rows="10" class="textarea-conteudo">{{postagens.conteudo}}</textarea>
+    <button type="submit"> Enviar</button>
+  </form>
+  <button><a href="/admin">Voltar</a></button>
+
+  <script>
+    const form = document.querySelector("form")
+    const input = document.querySelector(".input-title-new")
+    const textarea = document.querySelector(".textarea-conteudo")
+    form.addEventListener("submit", async (target) =>{
+        target.preventDefault();
+        data = {
+          "titulo": input.value,
+          "conteudo": textarea.value,
+          "id": input.dataset.id
+        }
+        response = await fetch(`/admin/alter/${data.id}`, {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+          'Content-Type': 'application/json'
+          }
+        })
+        const result = await response.json();
+        if(result.resultModify == 1){
+          alert("Postagem editada com sucesso")
+        }else{
+          alert("Postagem não pode ser editada, tente novamente")
+        }
+      })
+  </script>
+</div>

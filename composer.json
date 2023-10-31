@@ -1,0 +1,21 @@
+{
+    "name": "vui/blog",
+    "require": {
+        "twig/twig": "^3.7"
+    },
+    "require-dev": {
+        "twig/extra-bundle": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/",
+            "core\\": "core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "chdevv",
+            "email": "carloshenriquedev01@gmail.com"
+        }
+    ]
+}

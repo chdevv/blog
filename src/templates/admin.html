@@ -1,0 +1,28 @@
+<div class="c-painel">
+  <h2 class="title-painel">Painel Administrativo Blog</h2>
+  <button><a href="admin/newPost">Criar novo Post!</a></button>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Título</th>
+        <th>Alterar</th>
+        <th>Deletar</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for post in postagens %}
+        <tr class="linha">
+          <th>{{post.id}}</th>
+          <th>{{post.titulo}}</th>
+          <th><button class="btn-alter"><a href="/admin/alter/{{post.id}}">Alterar</a></button></th>
+          <th><button class="btn-delete" data-url="/admin/delete/{{post.id}}" data-method="POST" data-id="{{post.id}}">Deletar</button></th>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<script src="/../assets/js/admin/delete.js">
+
+</script>

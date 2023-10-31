@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/../assets/css/vendorNpm/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/../assets/css/{{fileCSS}}/{{fileCSS}}.css">
+  <link rel="stylesheet" href="/../assets/css/estrutura/estrutura.css">
+</head>
+
+<body>
+  <div class="c-template-dinamico">
+    <header>
+      <div class="c-logo">
+        <img src="/../assets/imgs/logo/logo-minimal-ch.png" alt="logo chdev" class="">
+      </div>
+      <nav>
+        <li><a href="/home">HOME</a></li>
+        <li><a href="/sobre">SOBRE</a></li>
+        <li><a href="/admin">ADMIN</a></li>
+      </nav>
+    </header>
+    <div class="c-dinamico">
+      {{typeTemplateDinamico}}
+    </div>
+    <script src="/../assets/js/bootstrapJS/bootstrap.bundle.min.js"></script>
+  </div>
+</body>
+</html>
