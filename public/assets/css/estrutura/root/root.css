@@ -7,7 +7,6 @@
 html{
   font-size: 62.5%;
 }
-
 body{
   width: 100%;
   min-height: 100vh;
@@ -16,15 +15,16 @@ body{
   background-image: url("/../../assets/imgs/background-tech.webp");    
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-
 .c-template-dinamico{
   margin: 0 auto;
-  width: 90%;
+  width: 95%;
   max-width: 1000px;
   min-height: 100vh;
   background-color: aliceblue;
-  border: 1px solid black;
-  box-shadow: 1px 1px 1px black;
 } 
+.c-dinamico{
+  padding: 30px;
+}
 

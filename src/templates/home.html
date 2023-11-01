@@ -1,17 +1,17 @@
-<h1 class="title-page">POSTAGENS</h1>
+<h1 class="title-page">Ultimas Postagens</h1>
 <div class="c-posts">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
         {% for post in postagens %}
             <div class="col">
               <article class="card h-100">
-                <img src="/../../assets/imgs/background-tech.webp   " class="card-img-top" alt="...">
+                <img src="/../../assets/imgs/background-tech.webp   " class="card-img-top" alt="imagem do post">
                 <div class="card-body">
                   <h2 class="card-title">{{post.titulo}}</h2>
                   <p class="card-text">{{post.conteudo}}</p>
-                  <a href="/post/show/{{post.id}}" class="btn btn-primary">Go somewhere</a>
+                  <a href="/post/show/{{post.id}}" class="btn btn-primary">Ver Post</a>
                 </div>
                 <div class="card-footer">
-                  <small class="text-body-secondary">Last updated 3 mins ago</small>
+                  <small class="text-body-secondary fs-5">Last updated 3 mins ago</small>
                 </div>
               </article>
             </div>

@@ -3,7 +3,7 @@ header {
   padding: 20px;
 }
 .resize-img{
-  width: clamp(100px, 10vw, 200px);
+  width: clamp(150px, 10vw, 200px);
 }
 header nav {
   display: flex;
@@ -18,4 +18,12 @@ nav a {
 } 
 nav a:focus, nav a:hover {
   color: hsl(209, 100%, 68%);
+}
+
+.btn-menu-color{
+  color: #0091FF;
+}
+
+.btn-menu-size{
+  font-size: clamp(1.7rem, 1.8vw, 1.9rem);
 }

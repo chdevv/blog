@@ -18,3 +18,11 @@
   color: #000000;
   margin: 0;
 }
+
+.bg-black{
+  background: black;
+}
+
+.bg-black-200{
+  background: #222;
+}
