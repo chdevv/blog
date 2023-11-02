@@ -4,11 +4,16 @@
   justify-content: space-around;
   align-items: center;
   padding: 30px 10px;
+  background: linear-gradient(to top, black, #222 );
 }
 
 .c-footer-generico{
   width: 50%;
   text-align: center;
+}
+
+.c-logo-footer{
+  width: 40%;
 }
 
 .c-ul-footer{
@@ -21,13 +26,26 @@
   text-align: center;
 }
 
+.c-footer .btn{
+  min-width: 80px;
+}
+
+.img-icon-footer{
+  width: clamp(30px, 1vw, 70px);
+}
 
 @media screen and (min-width: 900px){
   .c-ul-footer ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 900px){
+  .c-ul-footer ul{
+    gap: 10px;
   }
 }
 
@@ -36,4 +54,3 @@
     flex-direction: column;
     gap: 20px;
 }
-
