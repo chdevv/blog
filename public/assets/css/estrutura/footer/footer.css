@@ -1,4 +1,39 @@
+
 .c-footer{
-  flex-direction: column;
-  gap: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 10px;
 }
+
+.c-footer-generico{
+  width: 50%;
+  text-align: center;
+}
+
+.c-ul-footer{
+  text-align: center;
+}
+
+.c-ul-footer ul{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+@media screen and (min-width: 900px){
+  .c-ul-footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .c-footer{
+    flex-direction: column;
+    gap: 20px;
+}
+
