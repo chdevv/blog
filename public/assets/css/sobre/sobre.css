@@ -1,0 +1,8 @@
+.sobre h2 {
+  font-size: clamp(2rem, 2vw, 2.2rem);
+}
+.sobre p {
+  color: #555;
+  font-size: clamp(1.4rem, 1.4vw, 1.7rem); 
+  text-indent: 20px;
+}
