@@ -14,25 +14,23 @@
 .c-logo-footer{
   width: 40%;
 }
-
+.c-logo-footer img{
+  width: clamp(130px, 20vw, 200px);
+}
 .c-ul-footer{
   text-align: center;
 }
-
 .c-ul-footer ul{
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-
 .c-footer .btn{
   min-width: 80px;
 }
-
 .img-icon-footer{
   width: clamp(30px, 1vw, 70px);
 }
-
 @media screen and (min-width: 900px){
   .c-ul-footer ul{
     display: flex;

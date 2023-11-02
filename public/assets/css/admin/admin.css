@@ -1,0 +1,19 @@
+.c-btn-new{
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.title-thead{
+  font-size: clamp(1.6rem, 1.6vw, 2.2rem);
+}
+
+.th-title{
+  max-width: 80px;
+}
+
+.linha th{ 
+  color: #333;
+  font-size: clamp(1.3rem, 1.3vw, 1.7rem);
+}
