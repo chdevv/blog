@@ -18,6 +18,9 @@ body{
   background-attachment: fixed;
 }
 .c-template-dinamico{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
   width: 95%;
   max-width: 1000px;
@@ -26,5 +29,6 @@ body{
 } 
 .c-dinamico{
   padding: 30px;
+  margin-bottom: auto ;
 }
 
