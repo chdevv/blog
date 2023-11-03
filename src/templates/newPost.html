@@ -1,15 +1,38 @@
+
+
+<script src="https://cdn.tiny.cloud/1/a6xx6thybrpqgrhqfuy1h1f5x6yjef9dav5i9kcme8ulx3vj/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+  tinymce.init({
+    selector: ".textarea-conteudo",
+    menubar: "false",
+    entity_encoding:"law",
+    setup: function (editor) {
+        editor.on('change', function () {
+            tinymce.triggerSave();
+    })}
+  });
+</script>
 <div class="c-newPost">
   <h2 class="title-newPost">Criar Novo Post:</h2>
-  <form >
-    <div>
-      <label for="titulo">Titulo da postagem:</label>
-      <input type="text" name="titulo" class="input-title-new" id="titulo" required>
+  <form>
+    <div class="mb-3">
+      <label class="title-label-newPost" for="titulo" class="form-label">Titulo da postagem:</label>
+      <input type="text" class="form-control input-title-new texts-newPost" id="titulo" placeholder="titulo" required>
+    </div>
+    <div class="mb-3">
+      <label class="title-label-newPost" for="conteudo" class="form-label">Conteúdo</label>
+      <textarea name="conteudo" class="form-control textarea-conteudo texts-newPost" id="conteudo" cols="30" rows="10" ></textarea>
     </div>
     
-    <textarea name="conteudo" cols="30" rows="10" class="textarea-conteudo" required></textarea>
-    <button type="submit"> Enviar</button>
+    <div class="c-btn-newPost d-flex gap-2 justify-content-end">
+      <button class="btn-submit btn btn-success"  type="submit"> Enviar</button>
+      <a class="btn btn-secondary" href="/admin">Voltar</a>
+    </div>
   </form>
-  <button><a href="/admin">Voltar</a></button>
 </div>
 
+
 <script src="/../assets/js/newPost/newPost.js"></script>
+
+
+

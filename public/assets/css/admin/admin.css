@@ -1,3 +1,23 @@
+.c-painel a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.c-painel h2{
+  padding: 0px;
+}
+
+.c-painel h2 .admin-icon{
+  width: clamp(9rem, 3.4vw,3.8rem);
+}
+
+.c-painel table a{
+  max-width: 90px;
+  margin: 0 auto;
+}
+
 .c-btn-new{
   display: flex;
   justify-content: end;
@@ -10,10 +30,20 @@
 }
 
 .th-title{
-  max-width: 80px;
+  width: 400px;
+  max-width: 400px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; 
 }
 
 .linha th{ 
+  vertical-align: middle;
   color: #333;
   font-size: clamp(1.3rem, 1.3vw, 1.7rem);
 }
+
+.admin-icon{
+  width: clamp(3.4rem, 3.4vw,3.8rem);
+}
+

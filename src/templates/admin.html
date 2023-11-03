@@ -1,7 +1,7 @@
 <div class="c-painel">
-  <h2 class="title-painel title-page">Painel Administrativo Blog</h2>
+  <h2 class="title-painel title-page"><img class="admin-icon" src="/../../assets/imgs/admin/icon/config.svg" alt="">Painel Administrativo Blog</h2>
   <div class="c-btn-new">
-    <a class="btn btn-primary fs-4" href="admin/newPost">CRIAR POST</a>
+    <a class="btn btn-primary fs-4" href="admin/newPost"><img class="admin-icon" src="/../../assets/imgs/admin/icon/new.svg" alt="criar post">CRIAR POST</a>
   </div>
  
   
@@ -19,9 +19,16 @@
         {% for post in postagens %}
           <tr class="linha">
             <th>{{post.id}}</th>
-            <th class=" ">{{post.titulo}}</th>
-            <th><a class="btn-alter btn btn-warning btn-config fs-4" href="/admin/alter/{{post.id}}">Alterar</a></th>
-            <th><a class="btn-delete btn btn-danger btn-config fs-4" data-url="/admin/delete/{{post.id}}" data-method="POST" data-id="{{post.id}}">Deletar</a></th>
+            <th class=" th-title">{{post.titulo}}</th>
+            <th>
+              <a class="btn-alter btn btn-warning btn-config fs-4" href="/admin/alter/{{post.id}}"><img class="
+                admin-icon" src="/../../assets/imgs/admin/icon/alter.svg" alt="alterar post"></a>
+            </th>
+            <th>
+              <a class="btn-delete btn btn-danger btn-config fs-4" data-url="/admin/delete/{{post.id}}" data-method="POST" data-id="{{post.id}}">
+                <img class="admin-icon" src="/../../assets/imgs/admin/icon/delete.svg" alt="deletar post">
+              </a>
+            </th>
           </tr>
         {% endfor %}
       </tbody>

@@ -1,0 +1,12 @@
+.c-btn-newPost .btn{
+  font-size: clamp(1.6rem, 1.6vw,1.8rem);
+}
+
+
+.title-label-newPost{
+  font-size: clamp(2rem, 2vw, 2.4rem);
+}
+
+.texts-newPost{
+  font-size: clamp(1.8rem, 1.8vw, 2.2rem);  
+}

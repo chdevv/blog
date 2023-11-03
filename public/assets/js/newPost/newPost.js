@@ -1,9 +1,10 @@
 const form = document.querySelector("form")
 const input = document.querySelector(".input-title-new")
 const textarea = document.querySelector(".textarea-conteudo")
+const btnSubmit = document.querySelector(".btn-submit")
 
-form.addEventListener("submit", async (target) =>{
-  target.preventDefault();
+async function conectionForNewPost(){
+  
   data = {
     "titulo": input.value,
     "conteudo": textarea.value
@@ -21,4 +22,17 @@ form.addEventListener("submit", async (target) =>{
   }else{
     alert("Postagem não pode ser criada, tente novamente")
   }
+}
+
+
+document.addEventListener("keypress", (event) =>{
+  if(event.key  == "Enter"){
+    btnSubmit.click()
+  }
+})
+
+
+form.addEventListener("submit", (target) =>{
+  target.preventDefault();
+  conectionForNewPost()
 })
