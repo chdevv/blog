@@ -1,0 +1,35 @@
+
+.banner-post{
+  width: 100%;
+}
+
+.c-post{
+  display: flex;
+  
+}
+
+.c-conteudo-post{
+  width: 70%;
+  padding: 20px;
+}
+.aside-post{
+  width: 30%;
+  background-color: grey;
+  padding: 20px;
+}
+
+.c-aside-post{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.aside-post img{
+  width:100%;
+}
+
+.c-dinamico{
+  margin-bottom: auto;
+}
+
+

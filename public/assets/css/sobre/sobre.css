@@ -1,3 +1,7 @@
+.c-dinamico{
+  padding: 20px;
+}
+
 .sobre h2 {
   font-size: clamp(2rem, 2vw, 2.2rem);
 }
