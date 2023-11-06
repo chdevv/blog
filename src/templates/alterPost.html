@@ -1,16 +1,38 @@
-<div class="c-newPost">
-  <h2 class="title-newPost">Alterar Post {{postagens.titulo}} {{postagens.id}}:</h2>
 
-  <form >
-    <div>
-      <label for="titulo">Titulo da postagem:</label>
-      <input type="text" name="titulo" class="input-title-new" id="titulo" value="{{postagens.titulo}}" data-id="{{postagens.id}}">
-    </div>
-    
-    <textarea name="conteudo" cols="30" rows="10" class="textarea-conteudo">{{postagens.conteudo}}</textarea>
-    <button type="submit"> Enviar</button>
-  </form>
-  <button><a href="/admin">Voltar</a></button>
+  
+
+<div>
+  <script src="https://cdn.tiny.cloud/1/a6xx6thybrpqgrhqfuy1h1f5x6yjef9dav5i9kcme8ulx3vj/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+    tinymce.init({
+      selector: ".textarea-conteudo",
+      menubar: "false",
+      entity_encoding:"law",
+      setup: function (editor) {
+          editor.on('change', function () {
+              tinymce.triggerSave();
+      })}
+    });
+  </script>
+  <div class="c-alterPost">
+    <h2 class="title-alterPost">Alterar Post {{postagens.titulo}} {{postagens.id}}:</h2>
+    <form>
+      <div class="mb-3">
+        <label class="title-label-alterPost" for="titulo" class="form-label">Titulo da postagem:</label>
+        <input type="text" class="form-control input-title-new texts-alterPost" id="titulo" placeholder="titulo" value="{{postagens.titulo}}" data-id="{{postagens.id}}" required>
+      </div>
+      <div class="mb-3">
+        <label class="title-label-alterPost" for="conteudo" class="form-label">Conteúdo</label>
+        <textarea name="conteudo" class="form-control textarea-conteudo texts-alterPost" id="conteudo" cols="30" rows="10">{{postagens.conteudo}}</textarea>
+      </div>
+      
+      <div class="c-btn-newPost d-flex gap-2 justify-content-end">
+        <button class="btn-submit btn btn-success" type="submit"> Enviar</button>
+        <a class="btn btn-secondary" href="/admin">Voltar</a>
+      </div>
+    </form>
+  </div>
+
 
   <script>
     const form = document.querySelector("form")
