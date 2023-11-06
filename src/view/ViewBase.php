@@ -31,8 +31,7 @@ class ViewBase{
     $conteudoHtmlRenderizado = $template->render(["typeTemplateDinamico" => $conteudoDinamicoRenderizado, "fileCSS" => $fileCSS]);
     echo html_entity_decode($conteudoHtmlRenderizado);
   }
-
-
+  
   private function viewStatic(string $srcTemplate, string $srcFolderTemplate, string $typeTemplateDinamico, string $fileCSS){
     $this->initView($srcTemplate,$srcFolderTemplate);
     $template = $this->initTemplate();

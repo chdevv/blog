@@ -11,8 +11,8 @@
         <tr class="text-center">
           <th class="title-thead">ID</th>
           <th class="title-thead">TÍTULO</th>
-          <th class="title-thead">OPÇÃO</th>
-          <th class="title-thead">OPÇÃO</th>
+          <th class="title-thead">ALTERAR</th>
+          <th class="title-thead">EXCLUIR</th>
         </tr>
       </thead>
       <tbody class="text-center">
@@ -22,11 +22,11 @@
             <th class=" th-title">{{post.titulo}}</th>
             <th>
               <a class="btn-alter btn btn-warning btn-config fs-4" href="/admin/alter/{{post.id}}"><img class="
-                admin-icon" src="/../../assets/imgs/admin/icon/alter.svg" alt="alterar post"></a>
+                admin-icon alter-icon" src="/../../assets/imgs/admin/icon/alter.svg" alt="alterar post"></a>
             </th>
             <th>
               <a class="btn-delete btn btn-danger btn-config fs-4" data-url="/admin/delete/{{post.id}}" data-method="POST" data-id="{{post.id}}">
-                <img class="admin-icon" src="/../../assets/imgs/admin/icon/delete.svg" alt="deletar post">
+                <img class="admin-icon delete-icon" src="/../../assets/imgs/admin/icon/delete.svg" alt="deletar post">
               </a>
             </th>
           </tr>
