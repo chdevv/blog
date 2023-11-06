@@ -18,7 +18,6 @@ class ViewBase{
     $this->srcFolderTemplate = $srcFolderTemplate;
     $this->loader = new \Twig\Loader\FilesystemLoader($srcFolderTemplate);
 		$this->twig = new \Twig\Environment($this->loader);
-  
   }
 
   private function viewDynamics(string $srcTemplate, string $srcFolderTemplate, string $typeTemplateDinamico, array $dados, string $fileCSS){
@@ -28,6 +27,7 @@ class ViewBase{
     $templateDinamico = $this->initTemplate();
     $dadosReverse = array_reverse($dados);
     $conteudoDinamicoRenderizado = $templateDinamico->render(["postagens" =>  $dadosReverse]);
+    $conteudoDinamicoRenderizado = html_entity_decode($conteudoDinamicoRenderizado);
     $conteudoHtmlRenderizado = $template->render(["typeTemplateDinamico" => $conteudoDinamicoRenderizado, "fileCSS" => $fileCSS]);
     echo html_entity_decode($conteudoHtmlRenderizado);
   }
